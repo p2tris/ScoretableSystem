@@ -3,7 +3,7 @@
 // DB name in Db
 $dbName = "andre";
 // DB adress, user, password in DB
-$connection = mysql_connect('localhost', 'root', '') or die("Could not connect.");
+$connection = mysql_connect('127.0.0.1', 'root', '') or die("Could not connect.");
 // Selecting DB
 mysql_select_db($dbName, $connection);
 
@@ -19,7 +19,8 @@ while($row = mysql_fetch_array($result))
 	$response = array(
         'id' => $row['id'],
         'koht' => $row['koht'],
-        'punktid' => $row['punktid']
+        'punktid' => $row['punktid'],
+		'punktid2t' => $row['punktid2t']
     );
     $responses[] = $response;
 	

@@ -38,24 +38,24 @@ CREATE TABLE IF NOT EXISTS `tants` (
 -- Andmete tõmmistamine tabelile `tants`
 --
 
-INSERT INTO `tants` (`id`, `koht`, `punktid`) VALUES
-(1, 'Harjumaa', 1),
-(2, 'Hiiumaa', 11),
-(3, 'Ida-Virumaa', 10),
-(4, 'Jarvamaa', 38),
-(5, 'Jogevamaa', 2),
-(6, 'Laane-Virumaa', 6),
-(7, 'Laanemaa', 132),
-(8, 'Parnumaa', 17),
-(9, 'Polvamaa', 9),
-(10, 'Raplamaa', 1),
-(11, 'Saaremaa', 0),
-(12, 'Tallinn', 7),
-(13, 'Tartu Linn', 3),
-(14, 'Tartumaa', 0),
-(15, 'Valgamaa', 4),
-(16, 'Viljandimaa', 0),
-(17, 'Vorumaa', 24);
+INSERT INTO `tants` (`id`, `koht`, `punktid`,`punktid2t`) VALUES
+(1, 'Harjumaa', 0, 0),
+(2, 'Hiiumaa', 0, 0),
+(3, 'Ida-Virumaa', 0, 0),
+(4, 'Jarvamaa', 0, 0),
+(5, 'Jogevamaa', 0, 0),
+(6, 'Laane-Virumaa', 0, 0),
+(7, 'Laanemaa', 0, 0),
+(8, 'Parnumaa', 0, 0),
+(9, 'Polvamaa', 0, 0),
+(10, 'Raplamaa', 0, 0),
+(11, 'Saaremaa', 0, 0),
+(12, 'Tallinn', 0, 0),
+(13, 'Tartu Linn', 0, 0),
+(14, 'Tartumaa', 0, 0),
+(15, 'Valgamaa', 0, 0),
+(16, 'Viljandimaa', 0, 0),
+(17, 'Vorumaa', 0, 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

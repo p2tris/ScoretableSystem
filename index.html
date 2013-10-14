@@ -5,10 +5,11 @@
 		<script type="text/javascript" src="js/scripts.js"></script>
 	</head>
 	<body>
-		<div id="eventName"><b>Maakondade vaheline talentidevõistlus "Au ja Uhkus 2013"</b></div>
-		<form name="form" action="" method="post" id="pointsTable">
+		<div id="eventName" align="center"><b>Tantsukarussell "Tähed laval"</b></div>
+		<div id="forms" STYLE="margin-top: 30px;">
+		<form name="form" action="" method="post" id="pointsTable" style="float:left">
 		<div id="insert_response" >
-			<table border='1'>
+			<table id='tants1' border='0'>
 				<thead>
 					<tr>
 						<th>Maakond/Linn</th>
@@ -18,8 +19,21 @@
 				</thead>
 			</table>
 		</div>
-		<input type="button" name="pointsButton" value="Anna punktid" onClick="givePoints()"/>
-		</form>		
-		
+		</form>
+		<form name="form2" action="" method="post" id="pointsTable2" style="float:left">
+		<div id="insert_response2t" >
+			<table id='tants2' border='0'>
+				<thead>
+					<tr>
+						<th>Maakond/Linn</th>
+						<th>Punktid</th>
+						<th>Kokku</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+		<input type="button" name="pointsButton" value="Anna punktid" onClick="givePoints()" style="float:right"/>		
+		</form>
+		</div>
 	</body>
 </html>
