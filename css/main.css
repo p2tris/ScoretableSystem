@@ -1,0 +1,36 @@
+body
+{
+	/* http://www.colorzilla.com/gradient-editor/ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f1da36), color-stop(100%,#fefcea));
+	/*background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#1e5799), color-stop(49%,#2989d8), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+	opacity: 0.9;
+
+}
+
+#forms
+{
+	margin-top: 20px;
+	font-weight:bold;
+}
+
+#forms2
+{
+	margin-top: 20px;
+	margin-left: 60px;
+	font-weight:bold;
+}
+
+#insert_response2t
+{
+	margin-left: 20px;
+}
+
+#insert_response
+{
+	margin-left: 20px;
+}
+
+thead
+{
+	font-style: italic;
+}

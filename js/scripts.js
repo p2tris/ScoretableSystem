@@ -95,8 +95,8 @@ function showUser(){
 			}
             $('#insert_response thead:last').after("<tbody><tr><td>" + item.koht + 
             		"</td><td><input name='points" + item.id + "' id='points" + item.id + 
-					"' onChange='updateSum("+item.id+", "+item.punktid+")'></td><td>" +
-            		"<input name='sum"+ item.id +"' id='sum"+ item.id +"' readonly='readonly' value='"+item.punktid+"' />" +
+					"' onChange='updateSum("+item.id+", "+item.punktid+")' class='form-control' size='2'></td><td>" +
+            		"<input name='sum"+ item.id +"' id='sum"+ item.id +"' readonly='readonly' value='"+Math.floor(item.punktid)+"' class='form-control' size='3'/>" +
             		"</td></tr></tbody>");
         });
 		
@@ -121,8 +121,8 @@ function showUser(){
 			}
             $('#insert_response2t thead:last').after("<tbody id='"+ item.punktid2t +"'><tr><td>" + item.koht + 
             		"</td><td><input name='points2t" + item.id + "' id='points2t" + item.id + 
-					"' onChange='updateSum2t("+item.id+", "+item.punktid2t+")'></td><td>" +
-            		"<input name='sum2t"+ item.id +"' id='sum2t"+ item.id +"' readonly='readonly' value='"+item.punktid2t+"' />" +
+					"' onChange='updateSum2t("+item.id+", "+item.punktid2t+")' class='form-control' size='2'></td><td>" +
+            		"<input name='sum2t"+ item.id +"' id='sum2t"+ item.id +"' readonly='readonly' value='"+Math.floor(item.punktid2t)+"' class='form-control' size='3'/>" +
             		"</td></tr></tbody>");
         });
 		keyMe();
