@@ -17,7 +17,7 @@ var http = createObject();
 	
 var xmlhttp;
 
-$tbid = 1;
+$tbid = 17;
 
 function showUser(){
 	
@@ -44,19 +44,27 @@ function showUser(){
 			} else if (item.koht == "Laanemaa") {
 				item.koht = "L‰‰nemaa";
 			}
-            $('#insert_response thead:last').after("<tbody id='tb" + $tbid + "' style='display: none;'><tr><td>" + item.koht + 
+            $('#insert_response thead:last').after("<tbody id='tb" + $tbid + "' style='display: none;'><tr><td> " + $tbid + ".</td><td>" + item.koht + 
             		"</td><td>" +
             		"<input name='sum"+ item.id +"' id='sum"+ item.id +"' readonly='readonly' value='"+item.finals+"' class='form-control' size='3'/>" +
             		"</td></tr></tbody>");
-            $tbid++;
+            $tbid--;
         });
 		
 	});
 }
-$tbid2 = 1;
+$tbid2 = 17;
 function getPoints() {
+
+	if ($tbid2==1) {document.getElementById('tb'+$tbid2).style.background = 'gold';};
+	if ($tbid2==2) {document.getElementById('tb'+$tbid2).style.background = 'silver';};
+
 	document.getElementById('tb'+$tbid2).style.display = '';
-	$tbid2++; 
+	$tbid2--; 
+
+
+	// In case of draws - manually can change inner html!
+	//if ($tbid2==4) {var text = document.getElementById('tb'+$tbid2).firstChild.firstChild; text.innerHTML = "3.";};
 }
 
 function GetXmlHttpObject(){

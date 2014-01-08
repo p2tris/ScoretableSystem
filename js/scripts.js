@@ -75,6 +75,18 @@ function showUser(){
 	$.getJSON('getDB.php', function(data) {
 		
         $('#insert_response').append("");
+
+        /*        $('#insert_response thead:last').after("<tbody><tr><td></td><td>Lääne-Virumaa</td><td><input class='form-control' size='2' readonly='readonly' value='x'></td><td>" +
+            "<input readonly='readonly' value='x' class='form-control' size='3'/>" +
+            		"</td></tr></tbody>");
+
+        $('#insert_response thead:last').after("<tbody><tr><td></td><td>Saaremaa</td><td><input class='form-control' size='2' readonly='readonly' value='x'></td><td>" +
+            "<input readonly='readonly' value='x' class='form-control' size='3'/>" +
+            		"</td></tr></tbody>");
+       
+        $('#insert_response thead:last').after("<tbody><tr><td></td><td>Jõgevamaa</td><td><input class='form-control' size='2' readonly='readonly' value='x'></td><td>" +
+            "<input readonly='readonly' value='x' class='form-control' size='3'/>" +
+            		"</td></tr></tbody>");*/
 		
 		//utf-8 json doesn't allow characters like õäöü etc. so necessary changes are made manualy
         $.each(data, function(i, item) {

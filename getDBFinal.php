@@ -8,32 +8,32 @@ $connection = mysql_connect('127.0.0.1', 'root', '') or die("Could not connect."
 mysql_select_db($dbName, $connection);
 
 //insert from first cat points from 1 to 17
-$sql1="SELECT * FROM tants ORDER BY punktid ASC";
+$sql1="SELECT * FROM tants ORDER BY punktid DESC";
 
 $result1 = mysql_query($sql1);
 
-$punktid1 = 1;
+$punktid1 = 14;
 
 while($row = mysql_fetch_array($result1))
 {
 	$insertSite_sql = 'UPDATE tants SET final = '.$punktid1.' WHERE id ='.$row['id'].' ;';
 	$insertSite = mysql_query($insertSite_sql) or die(mysql_error());
-	$punktid1++;
+	$punktid1--;
 }
 
 //insert from second cat points from 1 to 17
-$sql2="SELECT * FROM tants ORDER BY punktid2t ASC";
+$sql2="SELECT * FROM tants ORDER BY punktid2t DESC";
 
 $result2 = mysql_query($sql2);
 
-$punktid2 = 1;
+$punktid2 = 14;
 
 while($row2 = mysql_fetch_array($result2))
 {
 	
 	$insertSite_sql2 = 'UPDATE tants SET final = (final + '.$punktid2.') WHERE id ='.$row2['id'].' ;';
 	$insertSite2 = mysql_query($insertSite_sql2) or die(mysql_error());
-	$punktid2++;
+	$punktid2--;
 }
 
 // Final table that actually gets shown

@@ -1,10 +1,15 @@
 body
 {
 	/* http://www.colorzilla.com/gradient-editor/ */
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f1da36), color-stop(100%,#fefcea));
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#d73713), color-stop(100%,#fefcea));
+	/* kollane background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f1da36), color-stop(100%,#fefcea));*/
 	/*background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#1e5799), color-stop(49%,#2989d8), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
 	opacity: 0.9;
+}
 
+html
+{
+	cursor: url('http://localhost/andre/css/img/mickey_mouse_finger.png'), pointer;
 }
 
 #forms
@@ -20,17 +25,37 @@ body
 	font-weight:bold;
 }
 
-#insert_response2t
+#insert_response2t, #insert_response
 {
 	margin-left: 20px;
+	font-size: 130%;
 }
 
-#insert_response
+#placeh
 {
+	margin-top: -10px;
 	margin-left: 20px;
+	font-size: 168%;
+}
+
+#points15, #points2t15, #points16, #points2t16, #points17, #points2t17, #sum15, #sum2t15, #sum16, #sum2t16, #sum17, #sum2t17
+{
+	visibility: hidden;
 }
 
 thead
 {
 	font-style: italic;
 }
+
+body 
+{
+	color:white;
+	text-transform:uppercase;
+	text-shadow:
+	    -1px -1px 0 #000,
+	    1px -1px 0 #000,
+	    -1px 1px 0 #000,
+	    1px 1px 0 #000;
+}
+
