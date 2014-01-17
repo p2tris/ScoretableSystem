@@ -59,10 +59,10 @@ function updateSum(id, points){
 	var givenPoints = "points"+id.toString();
 	document.getElementById(total).value = (document.getElementById(givenPoints).value -0) + parseInt(points);
 }
-function updateSum2t(id, points){
+function updateSum2t(id, points2t){
 	var total2t = "sum2t"+id.toString();
 	var givenPoints2t = "points2t"+id.toString();
-	document.getElementById(total2t).value = (document.getElementById(givenPoints2t).value -0) + parseInt(points);
+	document.getElementById(total2t).value = (document.getElementById(givenPoints2t).value -0) + parseInt(points2t);
 }
 	
 var xmlhttp;
@@ -75,18 +75,6 @@ function showUser(){
 	$.getJSON('getDB.php', function(data) {
 		
         $('#insert_response').append("");
-
-        /*        $('#insert_response thead:last').after("<tbody><tr><td></td><td>L‰‰ne-Virumaa</td><td><input class='form-control' size='2' readonly='readonly' value='x'></td><td>" +
-            "<input readonly='readonly' value='x' class='form-control' size='3'/>" +
-            		"</td></tr></tbody>");
-
-        $('#insert_response thead:last').after("<tbody><tr><td></td><td>Saaremaa</td><td><input class='form-control' size='2' readonly='readonly' value='x'></td><td>" +
-            "<input readonly='readonly' value='x' class='form-control' size='3'/>" +
-            		"</td></tr></tbody>");
-       
-        $('#insert_response thead:last').after("<tbody><tr><td></td><td>Jıgevamaa</td><td><input class='form-control' size='2' readonly='readonly' value='x'></td><td>" +
-            "<input readonly='readonly' value='x' class='form-control' size='3'/>" +
-            		"</td></tr></tbody>");*/
 		
 		//utf-8 json doesn't allow characters like ı‰ˆ¸ etc. so necessary changes are made manualy
         $.each(data, function(i, item) {
@@ -106,9 +94,9 @@ function showUser(){
 				item.koht = "L‰‰nemaa";
 			}
             $('#insert_response thead:last').after("<tbody><tr><td>" + item.koht + 
-            		"</td><td><input name='points" + item.id + "' id='points" + item.id + 
-					"' onChange='updateSum("+item.id+", "+item.punktid+")' class='form-control' size='2'></td><td>" +
-            		"<input name='sum"+ item.id +"' id='sum"+ item.id +"' readonly='readonly' value='"+Math.floor(item.punktid)+"' class='form-control' size='3'/>" +
+            		"</td><td><input type ='text' name='points" + item.id + "' id='points" + item.id + 
+					"' onChange='updateSum("+item.id+", "+item.punktid+")' class='form-control' size='1'></td><td>" +
+            		"<input type ='text' name='sum"+ item.id +"' id='sum"+ item.id +"' readonly='readonly' value='"+Math.floor(item.punktid)+"' class='form-control' size='1' />" +
             		"</td></tr></tbody>");
         });
 		
@@ -132,9 +120,9 @@ function showUser(){
 				item.koht = "L‰‰nemaa";
 			}
             $('#insert_response2t thead:last').after("<tbody id='"+ item.punktid2t +"'><tr><td>" + item.koht + 
-            		"</td><td><input name='points2t" + item.id + "' id='points2t" + item.id + 
-					"' onChange='updateSum2t("+item.id+", "+item.punktid2t+")' class='form-control' size='2'></td><td>" +
-            		"<input name='sum2t"+ item.id +"' id='sum2t"+ item.id +"' readonly='readonly' value='"+Math.floor(item.punktid2t)+"' class='form-control' size='3'/>" +
+            		"</td><td><input type ='text' name='points2t" + item.id + "' id='points2t" + item.id + 
+					"' onChange='updateSum2t("+item.id+", "+item.punktid2t+")' class='form-control' size='1'></td><td>" +
+            		"<input type ='text' name='sum2t"+ item.id +"' id='sum2t"+ item.id +"' readonly='readonly' value='"+Math.floor(item.punktid2t)+"' class='form-control' size='1'/>" +
             		"</td></tr></tbody>");
         });
 		keyMe();

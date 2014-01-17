@@ -5,6 +5,15 @@ body
 	/* kollane background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f1da36), color-stop(100%,#fefcea));*/
 	/*background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#1e5799), color-stop(49%,#2989d8), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
 	opacity: 0.9;
+	overflow: hidden;
+	color:white;
+	text-transform:uppercase;
+	text-shadow:
+	    -1px -1px 0 #000,
+	    1px -1px 0 #000,
+	    -1px 1px 0 #000,
+	    1px 1px 0 #000;
+	
 }
 
 html
@@ -28,14 +37,21 @@ html
 #insert_response2t, #insert_response
 {
 	margin-left: 20px;
-	font-size: 130%;
+	font-size: 180%;
 }
 
-#placeh
+#placeh1
 {
-	margin-top: -10px;
+	margin-top: -2px;
+	margin-left: 70px;
+	font-size: 175%;
+}
+
+#placeh2
+{
+	margin-top: -2px;
 	margin-left: 20px;
-	font-size: 168%;
+	font-size: 175%;
 }
 
 #points15, #points2t15, #points16, #points2t16, #points17, #points2t17, #sum15, #sum2t15, #sum16, #sum2t16, #sum17, #sum2t17
@@ -48,14 +64,7 @@ thead
 	font-style: italic;
 }
 
-body 
+input[type="text"]
 {
-	color:white;
-	text-transform:uppercase;
-	text-shadow:
-	    -1px -1px 0 #000,
-	    1px -1px 0 #000,
-	    -1px 1px 0 #000,
-	    1px 1px 0 #000;
+    font-size:24px;
 }
-

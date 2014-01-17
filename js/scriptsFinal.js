@@ -46,7 +46,7 @@ function showUser(){
 			}
             $('#insert_response thead:last').after("<tbody id='tb" + $tbid + "' style='display: none;'><tr><td> " + $tbid + ".</td><td>" + item.koht + 
             		"</td><td>" +
-            		"<input name='sum"+ item.id +"' id='sum"+ item.id +"' readonly='readonly' value='"+item.finals+"' class='form-control' size='3'/>" +
+            		"<input type ='text' name='sum"+ item.id +"' id='sum"+ item.id +"' readonly='readonly' value='"+Math.floor(item.finals)+"' class='form-control' size='3'/>" +
             		"</td></tr></tbody>");
             $tbid--;
         });
@@ -56,25 +56,23 @@ function showUser(){
 $tbid2 = 17;
 function getPoints() {
 
-	if ($tbid2==1) {document.getElementById('tb'+$tbid2).style.background = 'gold';};
-	if ($tbid2==2) {document.getElementById('tb'+$tbid2).style.background = 'silver';};
+	if ($tbid2==1) 
+	{
+		document.getElementById('tb'+$tbid2).style.background = 'gold';
+		//createFirework();
+	}
+	if ($tbid2==2) 
+	{
+		document.getElementById('tb'+$tbid2).style.background = 'silver';
+	}
 
 	document.getElementById('tb'+$tbid2).style.display = '';
+
 	$tbid2--; 
 
 
-	// In case of draws - manually can change inner html!
-	//if ($tbid2==4) {var text = document.getElementById('tb'+$tbid2).firstChild.firstChild; text.innerHTML = "3.";};
+	// In case of draws - manually can change inner html! 
+	// 3-4
+	//if ($tbid2==3 || $tbid2==4) {var text = document.getElementById('tb'+$tbid2).firstChild.firstChild; text.innerHTML = "3-4.";};
 }
 
-function GetXmlHttpObject(){
-	if (window.XMLHttpRequest){
-		// code for IE7+, Firefox, Chrome, Opera, Safari
-		return new XMLHttpRequest();
-	}
-	if (window.ActiveXObject){
-		// code for IE6, IE5
-		return new ActiveXObject("Microsoft.XMLHTTP");
-	}
-	return null;
-}

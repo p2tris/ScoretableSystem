@@ -7,7 +7,7 @@ $connection = mysql_connect('127.0.0.1', 'root', '') or die("Could not connect."
 // Selecting DB
 mysql_select_db($dbName, $connection);
 
-//insert from first cat points from 1 to 17
+//insert from first cat points from 1 to 14
 $sql1="SELECT * FROM tants ORDER BY punktid DESC";
 
 $result1 = mysql_query($sql1);
@@ -21,7 +21,7 @@ while($row = mysql_fetch_array($result1))
 	$punktid1--;
 }
 
-//insert from second cat points from 1 to 17
+//insert from second cat points from 1 to 14
 $sql2="SELECT * FROM tants ORDER BY punktid2t DESC";
 
 $result2 = mysql_query($sql2);
@@ -31,7 +31,7 @@ $punktid2 = 14;
 while($row2 = mysql_fetch_array($result2))
 {
 	
-	$insertSite_sql2 = 'UPDATE tants SET final = (final + '.$punktid2.') WHERE id ='.$row2['id'].' ;';
+	$insertSite_sql2 = 'UPDATE tants SET final = (final + '.$punktid2.' + koma) WHERE id ='.$row2['id'].' ;';
 	$insertSite2 = mysql_query($insertSite_sql2) or die(mysql_error());
 	$punktid2--;
 }
